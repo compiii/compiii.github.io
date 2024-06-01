@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta name="keywords" content="Jerry LACMOU ZEUTOUO, Parallel Computing, Distributed Computing, High-Performance Computing, Programming Model, Dynamic Programming, Component-Based Software Programming, Soft Parallel Computing, Postdoc, INRIA, ENS Lyon, Lyon, Laboratoire de l'Informatique du Parallélisme">
+	<meta name="description" content="Jerry LACMOU ZEUTOUO's personal website. I'm a research engineer at the INRIA Lyon Center working on a component-based programming model for HPC applications.">
+	<meta name="author" content="Jerry LACMOU ZEUTOUO">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<!-- Goole Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;500&family=Roboto&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/ed526f9314.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+	<style type="text/css">
+		/* General */
+		html {
+			scroll-behavior: smooth;
+		}
+		p, ul, li, h1, h3, h4, h5 {
+			font-family: 'Roboto', sans-serif;
+			color: #555;
+		} 
+
+
+		a.icons:link, a.icons:visited {
+			color: #555;
+			font-weight: normal;
+		}
+		a.icons:hover, a.icons:active {
+			color: #1B5B83;
+			transition: all .3s;
+		}
+
+		a:hover, a:active, a:link, a:visited  {
+			color: #1B5B83;
+			font-weight: bold;
+		}
+		a.no_bold:hover, a.no_bold:active, a.no_bold:link, a.no_bold:visited {
+			color: #1B5B83;
+			font-weight: normal;
+		}
+		/* About Me / Interests */
+		.navbar-brand {
+			font-family: 'Roboto', sans-serif;
+			color: black;
+		}
+		.keyword {
+			font-family: 'Roboto', sans-serif;
+			font-size: 0.8em;
+			font-weight: normal;
+			margin-right: 0.5em;
+			color: #1B5B83;
+		}
+		.address1 li:before {
+			content: "<i class=\"fas fa-map-marker-alt\"></i>";
+		}
+		/* Publications */
+		ol {
+			list-style: none;
+			margin-left: 1em;
+			font-size: 15px;
+		}
+		ol.journal {counter-reset: cnt 10;} /* counters */
+		ol.conference {counter-reset: cnt 5;} /* counters */
+		ol.talk {counter-reset: cnt 2;} /* counters */
+		ol li {
+			counter-increment: cnt -1;
+			margin-bottom: 0.5em;
+			display: inline-block;
+			position: relative;
+		}
+		ol.conference li:before {
+			content: "[C" counter(cnt) "]";
+			margin-right: 0.5em;
+			position: absolute;
+			left: -2.5em;
+		}
+		ol.journal li:before {
+			content: "[J" counter(cnt) "]";
+			margin-right: 0.5em;
+			position: absolute;
+			left: -2.5em;
+		}
+		ol.talk li:before {
+			content: "[T" counter(cnt) "]";
+			margin-right: 0.5em;
+			position: absolute;
+			left: -2.5em;
+		}
+		/* Teaching */
+		.subtitle{
+			font-size: 0.9em;
+		}
+		ul.courses li {
+			font-size: 0.9em;
+			color: #555;
+		}
+		ul.courses {
+			margin-bottom: -0.8em;
+		}
+		/* Research Gallery */
+		.modal_custom {
+			transition: 0.3s;
+			cursor: pointer;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+		.modal_custom:hover {
+			opacity: 0.5;
+		}
+		.modal-title{
+			color: white;
+			text-align: center;
+			background-color: black;
+			padding: 5px;
+		}
+		.thumb_custom{
+			max-height: 200px;
+		}
+		.custom{
+			background-color: #1B5B83;
+			color: white;
+			margin-right: 8px;
+			padding: 0.3em 1em;
+		}
+	</style>
+
+	<title>Jerry LACMOU ZEUTOUO, Ph.D.</title>
+  </head>
+  <body>
+
+  <!-- -------------- Navigation Bar -------------- -->
+
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light" style="border-bottom: 1px solid #222;">
+		<div class="container">
+			<a class="navbar-brand" href="#top" style="color: #222;font-weight: bold;">Jerry LACMOU ZEUTOUO, Ph.D.</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsExample09">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#top">About me</a>
+					</li>
+					<!-- <li class="nav-item">
+						<a class="nav-link" href="#res">Research</a>
+					</li> -->
+					<li class="nav-item">
+						<a class="nav-link" href="#teach">Teaching</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#pubs">Publications</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#news">News</a>
+					</li>
+					<!-- <li class="nav-item">
+						<a class="nav-link" href="#awa">Awards</a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</nav>	   
+
+	<div class="container" style="padding-top: 5em;" id="top">
+
+		<div class="row">
+
+			<!-- -------------- Left Column with contact info and pic -------------- -->
+		
+			<div class="col-sm-3">
+				<p><img src="bio.png" class="img-fluid w-75 mx-auto d-block d-sm-none"></p>
+				<p><img src="bio.png" class="img-fluid d-none d-sm-block"></p>
+				<p class="text-center">
+					<a class="icons" href="https://www.researchgate.net/profile/Jerry-Lacmou-Zeutouo" target="blank"><i class="ai ai-researchgate-square ai-2x"></i></a>
+					<a class="icons" href="https://scholar.google.com/citations?user=Easc4qwAAAAJ" target="blank"><i class="ai ai-google-scholar-square ai-2x"></i></a>
+					<a class="icons" href="https://orcid.org/0000-0003-4414-7453" target="blank"><i class="ai ai-orcid-square ai-2x"></i></a>
+					<a class="icons" href="https://www.webofscience.com/wos/author/record/AAR-8195-2021" target="blank"><i class="ai ai-scopus-square ai-2x"></i></a>
+					<a class="icons" href="https://www.linkedin.com/in/compiii" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
+					<a class="icons" href="https://twitter.com/jerrylacmou" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+				</p>
+				<p class="text-center" style="font-size: 0.9em;"><i class="far fa-envelope"></i> jerry.lacmou-zeutouo@inria.fr <br> <i class="fas fa-phone"></i> +33782808535</p>
+				<p class="text-center"><i class="fas fa-map-marker-alt"></i>  <b>Résidence Les Estudines</b><br>34 Grande Rue de la Guillotière<br>69007 Lyon, France</p>
+				<p class="text-center" style="margin-top: 1em;">
+					<!-- <img src="logo_avalon.png" class="img-fluid w-75">
+					<img src="logo_lip.png" class="img-fluid w-75">	 -->
+					<!-- <img src="logo_inria.png" class="img-fluid w-100">
+					<img src="logo_ens.svg" class="img-fluid w-75">	 -->
+				</p>
+			</div>
+
+			<!-- -------------- About me -------------- -->
+
+			<div class="col-sm-9">
+				<h3 style="padding-top: 1em;">About me</h3>
+				<p>
+					Hi! I'm Jerry LACMOU ZEUTOUO, postdoctoral researcher at the INRIA Lyon Center in <a href="http://www.ens-lyon.fr/LIP" target="blank">
+						Laboratoire de l'Informatique du Parallélisme</a>, France. I am working on a component-based programming model for HPC applications in the the joint project-team Avalon INRIA.
+						<!-- Indeed, having finished the writing of my thesis and submitted for expertise in Cameroon, I applied to the post-doctoral research offer that the Avalon team proposed. Since the defense procedures in Cameroon were quite long, I was recruited as a research engineer on September 1st, 2022 in order to start working on the post-doctoral research project while waiting to defend my PhD thesis in Cameroon on December 21st, 2022. -->
+				</p>
+				<p>Before this:
+					<ul style="margin-top: -10px;">
+						<li>I am a part-time lecturer at the University Claude Bernard Lyon 1 from October 2022 until now.</li>
+						<li>I was research engineer at the the INRIA Lyon Center from October 2022 until 31 December 2023.</li>
+						<li>I received a Ph.D. in parallel computing at the <a href="https://www.univ-dschang.org" target="blank">University of Dschang</a> in 2022.</li>
+						<li>I am a part-time lecturer at the Institut Universitaire et Stratégique de l’Estuaire (IUEs/Insam) from Febuary 2021 until April 2021.</li>
+						<li>I am a monitor at the <a href="https://www.univ-dschang.org" target="blank">University of Dschang</a> from October 2018 until July 2021.</li>
+						<li>I received a master's degree in computer science specializing in networks and distributed services from <a href="https://www.univ-dschang.org" target="blank">University of Dschang</a> in 2017.</li>
+						<li>I received a bachelor's degree in fundamental computer science at the <a href="https://www.univ-dschang.org" target="blank">University of Dschang</a> in 2015.</li>
+					</ul>
+				</p>
+
+				<!-- <p>
+					<div class="text-center">
+						<img src="https://drive.google.com/uc?export=view&id=1ME2cgNHHuTO2fraxTsWBoSiBWjGw_fcn" class="img-fluid" style="max-width:25%; margin-right: 1%;">
+						<img src="https://drive.google.com/uc?export=view&id=19nmQPTmBj6kQaHInds1BnfmxeznPR21R" class="img-fluid" style="max-width:25%; margin-right: 1%;">
+						<img src="https://drive.google.com/uc?export=view&id=18oFPOKtDsSYlVlDbbqr_wJ2o_H1afqDG" class="img-fluid" style="max-width:25%; margin-right: 1%;">
+						<img src="https://drive.google.com/uc?export=view&id=1BVqQ6R6tLMe_iGPpCOf-akmarocR-pLi" class="img-fluid" style="max-width:25%; margin-right: 1%;">
+						<img src="https://drive.google.com/uc?export=view&id=1At4Kcq0X3_qgo6hU3XdZdsF6iqZ8OcdM" class="img-fluid" style="max-width:25%; margin-right: 1%;">
+					</div>
+				</p>
+
+				<p>
+					<div class="text-center" style="margin-top: 40px;">
+						<p>Please, consider submitting your work to this Special Issue, where I serve as Guest Editor!</p>
+						<a href="https://www.mdpi.com/journal/machines/special_issues/4O34859K05" target="blank">
+							<img src="https://drive.google.com/uc?export=view&id=1AAMrB34CrES9R0-YgAbLgqqU7x2vQXv7" class="img-fluid" style="max-width:75%;">
+						</a>
+					</div>
+				</p> -->
+
+				<!-- -------------- Research Interests -------------- -->
+
+				<!-- <h3 style="padding-top: 3em;" id="res">Research Interest </h3> 
+				
+				<p class="text-justify">
+					I have been exploring the domain of <b>wearable Parallel Computing</b>, using both traditional rigid exoskeletons and new soft exosuits. 
+					The lab I'm setting up wants to develop cutting-edge technology for <b>functional movement assistance</b> and <b>remote monitoring</b>. 
+					Wearable Parallel Computing is a very challenging field and the current technology is still far from being ready to everyday use. 
+					However, it is reasonable to think that these robots are going to play an important role in our future. 
+					Robots that can help people, reduce injuries, improve recovery during rehabilitation, monitor body parameters and early diagnose potential diseases, 
+					efficiently compensate for physical disability, or even "just" assist during fatiguing everyday tasks at home: make life easier!</p>
+				<p class="text-justify">
+					Several aspects of the <b>physical human-robot interaction</b> still need further investigation (<i>e.g.</i> complex mechanical coupling with the human body) 
+					but we will focus our efforts on: 
+					<ul style="margin-top: -10px;">
+						<li>how to design novel solutions to support human movements,</li>
+						<li>how to smartly share the control of the body between the human user and the robot,</li>
+						<li>how to detect and anticipate the user's intentions of movement,</li> 
+						<li>how to adapt the robot initiative to the different applications and contexts,</li>
+						<li>how to collect meaningful data from the human-robot interaction.</li>
+					</ul>
+				</p>
+				<p class="text-justify">
+					Being an engineer, I'm very interested in solutions that can have a real impact on people, <b>translating out of the academic environment</b>. 
+					Thus I'm always considering themes like cost-efficiency (<i>e.g.</i> underactuation and minimal amount of sensors), robustness (testing unsupervised users' behaviors in unconstrained environments), 
+					and proven usefulness (<i>e.g.</i> investigating the effects of a control strategy but also how to properly assess these effects) in my daily activity.
+				</p>
+
+				<div class="d-flex  justify-content-center">
+					<h5><span class="badge custom">Wearable Parallel Computing</span><span class="badge custom">Soft Parallel Computing</span><span class="badge custom">Biomechanics</span><span class="badge custom">Controls</span></h5>
+				</div>
+
+				<h5 style="margin-top: 1em;">Gallery</h5>
+				
+				<!-- -------------- Thumbnails -------------- --
+
+				<div class="row mx-0">
+					<div class="col-sm-4 px-1 thumb_custom">
+						<img src="https://drive.google.com/uc?export=view&id=1vxtAhfMhOGf0c2mscu4xhj7cXWsFzACt" class="img-fluid modal_custom" data-toggle="modal" data-target="#modal8">
+					</div>
+					<div class="col-sm-4 px-1 thumb_custom">
+						<img src="https://drive.google.com/uc?export=view&id=1zRGGT6hNzc72BMSnnb-pbJO_6MzIzxu1" class="img-fluid modal_custom" data-toggle="modal" data-target="#modal7">
+					</div>
+					<div class="col-sm-4 px-1 thumb_custom">
+						<img src="https://drive.google.com/uc?export=view&id=14RjR6yVdteMnmeSJDl1WPwUWrMxo3jKy" class="img-fluid modal_custom" data-toggle="modal" data-target="#modal6">
+					</div>
+				</div>
+				<div class="row mx-0" style="margin-top: 6px;">
+					<div class="col-sm-4 px-1 thumb_custom">
+						<img src="https://drive.google.com/uc?export=view&id=1IvtqUPQsnB9Si1ee14ZMSGr2j6ttchNd" class="img-fluid modal_custom" data-toggle="modal" data-target="#modal1">
+					</div>
+					<div class="col-sm-4 px-1 thumb_custom">
+						<img src="https://drive.google.com/uc?export=view&id=1_2LiRojQY_fxug_sPd5Pcp-sOSrCBFKD" class="img-fluid modal_custom" data-toggle="modal" data-target="#modal9">
+					</div>
+					<div class="col-sm-4 px-1 thumb_custom">
+						<img src="https://drive.google.com/uc?export=view&id=1vnpj_4PKAujuMtkqChudzZyFitm5kvnQ" class="img-fluid modal_custom" data-toggle="modal" data-target="#modal4">
+					</div>
+				</div>
+				<div class="row mx-0" style="margin-top: 6px;">
+					<div class="col-sm-4 px-1 thumb_custom">
+						<img src="https://drive.google.com/uc?export=view&id=1hV1fHk_3mkpI_OkTyU9kfpkAQyeBI8aJ" class="img-fluid modal_custom" data-toggle="modal" data-target="#modal2">
+					</div>
+					<div class="col-sm-4 px-1 thumb_custom">
+						<img src="https://drive.google.com/uc?export=view&id=1oNtYx27dzoxgI4fIrCsCP4oVWv0Gyf9r" class="img-fluid modal_custom" data-toggle="modal" data-target="#modal5">
+					</div>
+					<div class="col-sm-4 px-1 thumb_custom">
+						<img src="https://drive.google.com/uc?export=view&id=1XuFHDn7MRVA2CfZjQ33-hFCmGBfcrRr0" class="img-fluid modal_custom" data-toggle="modal" data-target="#modal3">
+					</div>
+				</div>
+
+				<div class="row mx-0" style="margin-top: 20px;">
+					<p>
+						Featured on
+						<div class="text-center">
+							<img src="https://drive.google.com/uc?export=view&id=1BlbPpn2yT68QmW6dTWMConvBdLnPesKS" class="img-fluid" style="max-width:100%;">
+						</div>
+					</p>
+				</div> -->
+
+				<!-- -------------- Modal Content -------------- -->
+
+				<!-- <div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+							<div class="modal-content">
+								<video controls>
+								 <source src="https://drive.google.com/uc?export=view&id=1c4l5Ma1-ki5tECIBPxOHBS8jN_11OPa0" type="video/mp4">
+								</video>
+								<p class="modal-title">
+									Video presentation for our RA-L paper [J6]. We showed the good performance achieved by our kinematics-based controller for a soft wearable shoulder robot 
+									for assisting industrial tasks.</p>
+						  </div>
+						</div>
+					  </div>
+				
+				<div class="modal fade" id="modal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+					  <div class="modal-content">
+							<video controls>
+							<source src="https://drive.google.com/uc?export=view&id=1fbhjHf3Sa5qle5iJ9D7d7Zh-OvQdSmK7" type="video/mp4">
+						   </video>
+							<p class="modal-title">
+								Supplementary material for our <i>Science Trans Med</i> paper [J9]. By using a soft wearable robot, we demonstrated improved motor and functional ability in 10 individuals living
+								with ALS. With only 4kg of weight on the waist, an intuitive control strategy and a battery-powered, fully untethered architecture, this work opens up to future use out 
+								of lab environment.</p>
+					  </div>
+					</div>
+				  </div>
+				
+				<div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+					  <div class="modal-content">
+						<img src="https://drive.google.com/uc?export=view&id=1zRGGT6hNzc72BMSnnb-pbJO_6MzIzxu1" class="img-fluid">
+						<p class="modal-title">
+							Receiving the Cullen Eduction and Research Fund (CERF) Medical Engineering Prize 2022 with Prof. Conor Walsh, and our collabolators from Brown University/Braingate 
+							Prof. Leigh Hochberg and Dr. Jacob Gusman.</p>
+					  </div>
+					</div>
+				  </div>
+
+				<div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				    <div class="modal-content">
+				      	<video controls>
+	           			<source src="https://drive.google.com/uc?export=download&id=1ds-EYjhD92hECcsMU8vC1PpCdzSvLFp7" type="video/mp4">
+	          		</video>
+	          		<p class="modal-title">
+						Video presentation of our RA-L paper [J5] at ICRA 2021. In this work, we presented a new sensing and control strategy for our soft wearable robot, tested on 8 healthy individuals. 
+						Main results: no restriction in ROM, accurate tracking of free motions, reduction of almost 60% of muscle activity when assisted, and ability to reproduce a recorded trajectory.</p>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				    <div class="modal-content">
+				      	<img src="https://drive.google.com/uc?export=view&id=1IvtqUPQsnB9Si1ee14ZMSGr2j6ttchNd" class="img-fluid">
+				        <p class="modal-title">
+							Harvard soft wearable robot to assist shoulder and elbow movements. 
+							The robot uses pneumatic textile-based actuators to assist both joints. In this picture, validation of the design of the robot with healthy lab members.</p>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				    <div class="modal-content">
+				      	<video controls>
+             			<source src="https://drive.google.com/uc?export=download&id=1oF7Os2-7NXlkBHe-RBKu3cFOS9aL3ggN" type="video/mp4">
+            		</video>
+            		<p class="modal-title">
+						Video submitted with RA-L paper [J4] showing the usage of our soft wearable robot to assist an occupational therapist performing rehabilitation exercises with 5 stroke individuals.</p>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				    <div class="modal-content">
+							<img src="https://drive.google.com/uc?export=view&id=1hV1fHk_3mkpI_OkTyU9kfpkAQyeBI8aJ" class="img-fluid">
+							<p class="modal-title">
+								ABLE, UPMC 4-DOF exoskeleton for upper-limb assistance. 
+								ABLE actively controls 3DOF of the shoulder and the elbow flexion/extension. 
+								In the picture, the user is performing a reaching task towards a 7-DOF WAM manipulator as target (part of my [J3] work).</p>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				    <div class="modal-content">
+						<video controls>
+        			<source src="https://drive.google.com/uc?export=download&id=1J_HpMIHcpzvKpf3pziP_kn8tVVfgrP3k" type="video/mp4">
+        		</video>
+						<p class="modal-title">
+							Simulation of a dynamic nonprehensile manipulation task (dynamic grasp to roll), part of my MS thesis work at Northwestern University. 
+							In red the manipulator, in blue the object, in green the target pose, in dashed green the transition pose between dynamic grasp and roll, in black the friction cone.</p>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				    <div class="modal-content">
+						<video controls>
+        			<source src="https://drive.google.com/uc?export=download&id=1X1vZXXJaF54cldnWUACeDsJvGWH1v2cB" type="video/mp4">
+        		</video>
+						<p class="modal-title">
+							Video submitted with JNER paper [J3] showing motor adaptation and subsequent after-effects occurring in a participant as consequence of the prolonged exposition to the robotic force field.</p>
+					</div>
+				  </div>
+				</div> -->
+
+
+
+			</div>
+		</div>
+
+
+		<!-- -------------- Teaching -------------- -->
+
+		<div class="row" id="teach" style="padding-top: -30em;">
+
+			<div class="col-sm-9 offset-sm-3">
+				<h3 style="margin-bottom: 1em;">Teaching</h3>
+				
+				<div class="row">
+					<div class="col-sm-1 mb-2">
+						<img src="logo_ucbl.png" class="img-fluid w-50 mx-auto d-block d-sm-none">
+						<img src="logo_ucbl.png" class="img-fluid d-none d-sm-block">
+					</div>
+					<div class="col-sm-11 mb-2">
+						<p>
+							<b>Programmation Concurrente et Administration Système | 2023-2024</b><br>
+							<b>Responsible : PICHON Grégoire</b> | <a href="https://asr-lyon1.gitlabpages.inria.fr/prog-concurrente/" target="blank">Practical work</a> | University Claude Bernard Lyon 1<br> 
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-1 mb-2">
+						<img src="logo_ucbl.png" class="img-fluid w-50 mx-auto d-block d-sm-none">
+						<img src="logo_ucbl.png" class="img-fluid d-none d-sm-block">
+					</div>
+					<div class="col-sm-11 mb-2">
+						<p>
+							<b>Conception et Programmation Web | 2023-2024</b><br>
+							<b>Responsible : THION Romuald</b> | <a href="http://lifweb.pages.univ-lyon1.fr/" target="blank">Practical work</a> | University Claude Bernard Lyon 1<br> 
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-1 mb-2">
+						<img src="logo_ucbl.png" class="img-fluid w-50 mx-auto d-block d-sm-none">
+						<img src="logo_ucbl.png" class="img-fluid d-none d-sm-block">
+					</div>
+					<div class="col-sm-11 mb-2">
+						<p>
+							<b>Algorithmique et Programmation Impérative, Initiation | 2022-2023</b><br>
+							<b>Responsible : DESSEREE Elodie</b> | <a href="https://perso.univ-lyon1.fr/elodie.desseree/LIFAPI/TP.html" target="blank">Practical work</a> | University Claude Bernard Lyon 1<br> 
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-1 mb-2">
+						<img src="logo_uds.jpg" class="img-fluid w-50 mx-auto d-block d-sm-none">
+						<img src="logo_uds.jpg" class="img-fluid d-none d-sm-block">
+					</div>
+					<div class="col-sm-11 mb-2">
+						<p>
+							<b>Initiation à l’Informatique | 2018-2019, 2019-2020, 2020-2021</b><br>
+							<b>Responsibles : KENGNE TCHENDJI Vianney and FOKOU PELAP Géraud</b> | <a href="https://drive.google.com/drive/folders/1e42ovEAYSFxK5uc0jK1kVh2PO9j_DYWL" target="blank">Tutorials</a> | University of Dschang<br> 
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-1 mb-2">
+						<img src="logo_uds.jpg" class="img-fluid w-50 mx-auto d-block d-sm-none">
+						<img src="logo_uds.jpg" class="img-fluid d-none d-sm-block">
+					</div>
+					<div class="col-sm-11 mb-2">
+						<p>
+							<b>Architecture des Ordinateurs | 2019-2020, 2020-2021</b><br>
+							<b>Responsible : FOKOU PELAP Géraud</b> | <a href="https://drive.google.com/drive/folders/1Jp2I9nqL4zF6QgwSH6eDYBO27sY47jAW" target="blank">Tutorials</a> | University of Dschang<br> 
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-1 mb-2">
+						<img src="logo_uds.jpg" class="img-fluid w-50 mx-auto d-block d-sm-none">
+						<img src="logo_uds.jpg" class="img-fluid d-none d-sm-block">
+					</div>
+					<div class="col-sm-11 mb-2">
+						<p>
+							<b>Programmation Orientée Objet (Java) | 2019-2020, 2020-2021</b><br>
+							<b>Responsible : TCHOUPÉ TCHENDJI Maurice</b> | <a href="https://drive.google.com/drive/folders/1sCZQ4D69OfPn6SRWeMOD0oJYmht-rtn2" target="blank">Tutorials and practical work</a> | University of Dschang<br> 
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-1 mb-2">
+						<img src="logo_uds.jpg" class="img-fluid w-50 mx-auto d-block d-sm-none">
+						<img src="logo_uds.jpg" class="img-fluid d-none d-sm-block">
+					</div>
+					<div class="col-sm-11 mb-2">
+						<p>
+							<b>Introduction aux bases de données | 2019-2020</b><br>
+							<b>Responsible : SOH Mathurin</b> | <a href="" target="blank">Tutorials and practical work</a> | University of Dschang<br> 
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-1 mb-2">
+						<img src="logo_uds.jpg" class="img-fluid w-50 mx-auto d-block d-sm-none">
+						<img src="logo_uds.jpg" class="img-fluid d-none d-sm-block">
+					</div>
+					<div class="col-sm-11 mb-2">
+						<p>
+							<b>Réseaux et systèmes d’exploitation | 2018-2019, 2019-2020, 2020-2021</b><br>
+							<b>Responsible : KENGNE TCHENDJI Vianney</b> | <a href="https://drive.google.com/drive/folders/11WiSB-Ts-tslFeu6IzmTZc7icpastzFz" target="blank">Tutorials, practical work, and projects</a> | University of Dschang<br> 
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-1 mb-2">
+						<img src="logo_uds.jpg" class="img-fluid w-50 mx-auto d-block d-sm-none">
+						<img src="logo_uds.jpg" class="img-fluid d-none d-sm-block">
+					</div>
+					<div class="col-sm-11 mb-2">
+						<p>
+							<b>Administration des services et serveurs | 2018-2019, 2019-2020, 2020-2021</b><br>
+							<b>Responsible : KENGNE TCHENDJI Vianney</b> | <a href="https://drive.google.com/drive/folders/11WiSB-Ts-tslFeu6IzmTZc7icpastzFz" target="blank">Tutorials, practical work, and projects</a> | University of Dschang<br> 
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-1 mb-2">
+						<img src="logo_insam.gif" class="img-fluid w-50 mx-auto d-block d-sm-none">
+						<img src="logo_insam.gif" class="img-fluid d-none d-sm-block">
+					</div>
+					<div class="col-sm-11 mb-2">
+						<p>
+							<b>Algorithmique et Programmation Orientée Objet | 2020-2021</b><br>
+							<b>Responsible : LACMOU ZEUTOUO Jerry</b> | <a href="https://drive.google.com/drive/folders/1sCZQ4D69OfPn6SRWeMOD0oJYmht-rtn2" target="blank">Course and Tutorials</a> | IUEs/Insam<br> 
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+
+
+		<!-- -------------- Publications -------------- -->
+
+		<div class="row" id="pubs" style="padding-top: 5em; margin-bottom: 2em;">
+
+			<div class="col-sm-9 offset-sm-3">
+				<h3> Publications and Talks</h3>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-sm-3">
+				<p>
+					<!-- *Authors equal contribution <br> -->
+					<i class="far fa-file-pdf"></i> <i class="fas fa-long-arrow-alt-right"></i> PDF file<br>
+				</p>
+			</div>
+
+			<div class="col-sm-9">
+
+				<h5> Talks </h5>
+
+				<ol class="talk">
+					
+					<li>
+						<u>Jerry Lacmou Zeutouo</u>, Christian Pérez, Thierry Gautier, Jonathan Rouzaud-Cornabas. (2023) 
+						<i>Extending the COMET component model to support hierarchical composite data : Aevol case study</i>, 
+						<b>Conférence francophone d'informatique en Parallélisme, Architecture et Système (COMPAS)</b> (Annecy, France).  
+						<a class="no_bold" href="https://docs.google.com/presentation/d/194-niBtnXW0MyfNifo4gr111aI0Z8PJi7bjVx4DxNnw" target="blank">slide</a> 
+						<a class="ref" href="https://docs.google.com/presentation/d/194-niBtnXW0MyfNifo4gr111aI0Z8PJi7bjVx4DxNnw" target="blank"><i class="far fa-file-pdf"></i></a> 
+					</li>
+					
+				</ol>
+
+			</div>
+
+			<div class="col-sm-9 offset-sm-3" style="margin-top: 1em;">
+				<h5> Journal Papers </h5>
+
+				<ol class="journal"> 
+
+					<li>
+						Arsème Vadèle Djeufack Nanfack, Gaël Le Mahec, Gilles Dequen, Vianney KengneTchendji, <u>Jerry Lacmou Zeutouo</u>. (2024) 
+						<i>"Achieving k-anonymity of a large-scale database in a distributed memory environment"</i>, 
+						<b>preprint</b>.
+						<a class="no_bold" href="http://dx.doi.org/10.36227/techrxiv.170619300.02350996/v1" target="blank">10.1109/tcbb.2022.321 6826</a>
+						<a class="ref" href="http://dx.doi.org/10.36227/techrxiv.170619300.02350996/v1" target="blank"><i class="far fa-file-pdf"></i></a>
+					</li>
+
+					<li>
+						<u>Jerry Lacmou Zeutouo</u>, Vianney Kengne Tchendji, Jean Frédéric Myoupo. (2023) 
+						<i>Coarse-Grained Multicomputer Parallel Algorithm Using the Four-Splitting Technique for the Minimum Cost Parenthesizing Problem</i>, 
+						<b>Revue Africaine de Recherche en Informatique et Mathématiques Appliquées - <i>Numéro spécial CARI 2022-2023</i>, vol. 8, pp. 1-13</b> 
+						<a class="no_bold" href="https://doi.org/10.46298/arima.11217" target="blank">hal-03712194</a> 
+						<a class="ref" href="https://doi.org/10.46298/arima.11217" target="blank"><i class="far fa-file-pdf"></i></a> 
+					</li>
+
+					<li>
+						Vianney Kengne Tchendji, Franklin Ingrid Kamga Youmbi, Clémentin Tayou Djamegni, <u>Jerry Lacmou Zeutouo</u>. (2023) 
+						<i>"A Parallel Tiled and Sparsified Four-Russians Algorithm for Nussinov's RNA Folding"</i>, 
+						<b>IEEE/ACM Transactions on Computational Biology and Bioinformatics, vol. 20:3, pp. 1795-1806.</b>.
+						<a class="no_bold" href="https://doi.org/10.1109/tcbb.2022.3216826" target="blank">10.1109/tcbb.2022.321 6826</a>
+						<a class="ref" href="https://drive.google.com/file/d/1BLAI4vjnbr1Z99s3C604r0AKryWGP5Vk" target="blank"><i class="far fa-file-pdf"></i></a>
+					</li>
+
+					<li>
+						<u>Jerry Lacmou Zeutouo</u>, Vianney Kengne Tchendji, Jean Frédéric Myoupo. (2022) 
+						<i>"Four-Splitting Based Coarse-Grained Multicomputer Parallel Algorithm for the Optimal Binary Search Tree Problem"</i>, 
+						<b>International Journal of Parallel, Emergent and Distributed Systems</b>, vol. 37:6, pp. 659-679.
+						<a class="no_bold" href="https://doi.org/10.10 80/17445760.2022.2102168" target="blank">10.10 80/17445760.2022.2102168</a>
+						<a class="ref" href="https://drive.google.com/file/d/11hKjxltYLeCQ3CIAWCEfSCphk0TJpHE6" target="blank"><i class="far fa-file-pdf"></i></a>
+					</li>
+
+					<li>
+						Vianney Kengne Tchendji, Hermann Bogning Tepiele, Mathias Akong Onabid, Jean Frédéric Myoupo, <u>Jerry Lacmou Zeutouo</u>. (2022) 
+						<i>"A Coarse-Grained Multicomputer Parallel Algorithm for the Sequential Substring Constrained Longest Common Subsequence Problem"</i>, 
+						<b>Parallel Computing</b>, vol. 111:1, pp. 102927.
+						<a class="no_bold" href="https://doi.org/10.1016/j.parco.2022.102927" target="blank">10.1016/j.parco.2022.102927</a>
+						<a class="ref" href="https://drive.google.com/file/d/1iKp8mDc7fhAnZhXLCCwFvHd2VGWsd4ml" target="blank"><i class="far fa-file-pdf"></i></a>
+					</li>
+
+					<li>
+						<u>Jerry Lacmou Zeutouo</u>, Vianney Kengne Tchendji, Jean Frédéric Myoupo. (2022) 
+						<i>"High-Performance CGM-Based Parallel Algorithms for Minimum Cost Parenthesizing Problem"</i>, 
+						<b>Journal of Supercomputing</b>, vol. 78:4, pp. 5306-5332.
+						<a class="no_bold" href="https://doi.org/10.1007/s11227-021-04069-9" target="blank">10.1007/s11227-021-04069-9</a>
+						<a class="ref" href="https://drive.google.com/file/d/1w3jWJ9lx8wKZIJ-fCEc42ubAdfmj4N-3" target="blank"><i class="far fa-file-pdf"></i></a>
+					</li>
+
+					<li>
+						<u>Jerry Lacmou Zeutouo</u>, Vianney Kengne Tchendji, Jean Frédéric Myoupo. (2021) 
+						<i>"Fast Sequential Algorithm for the Matrix Chain Ordering Problem"</i>, 
+						<b>Concurrency Computation : Practice Experience</b>, vol. 33:24, pp. e6445.
+						<a class="no_bold" href="https://doi.org/10.1002/cpe.6445" target="blank">10.1002/cpe.6445</a>
+						<a class="ref" href="https://drive.google.com/file/d/1SfCdifgmu6NPZtPYb963sY0vu213c4iy" target="blank"><i class="far fa-file-pdf"></i></a>
+					</li>
+
+					<li>
+						Vianney Kengne Tchendji, Armel Nkonjoh Ngomade, <u>Jerry Lacmou Zeutouo</u>, Jean Frédéric Myoupo. (2019) 
+						<i>"Efficient CGM-Based Parallel Algorithms for the Longest Common Subsequence Problem with Multiple Substring-Exclusion Constraints"</i>, 
+						<b>Parallel Computing</b>, vol. 91:1, pp. 102598.
+						<a class="no_bold" href="https://doi.org/10.1016/j.parco.2019. 102598" target="blank">10.1016/j.parco.2019. 102598</a>
+						<a class="ref" href="https://drive.google.com/file/d/1gZMB2ByNTHG8yAuWihY3y7eQZkVJ85fs" target="blank"><i class="far fa-file-pdf"></i></a>
+					</li>
+
+					<li>
+						Vianney Kengne Tchendji, <u>Jerry Lacmou Zeutouo</u>. (2019) 
+						<i>"An Efficient CGM-Based Parallel Algorithm for Solving the Optimal Binary Search Tree Problem through One-to-all Shortest Paths in a Dynamic Graph"</i>, 
+						<b>Data Science and Engineering</b>, vol. 4:2, pp. 141-156.
+						<a class="no_bold" href="https://doi.org/10.1007/s41019-019-0093-9" target="blank">10.1007/s41019-019-0093-9</a>
+						<a class="ref" href="https://link.springer.com/content/pdf/10.1007/s41019-019-0093-9.pdf" target="blank"><i class="far fa-file-pdf"></i></a>
+					</li>
+				
+				</ol>
+
+			</div>
+
+			<div class="col-sm-9 offset-sm-3" style="margin-top: 1em;">
+
+				<h5> Conference Papers </h5>
+
+				<ol class="conference">
+					
+					<li>
+						A Yvan Guifo Fodjo, <u>Jerry Lacmou Zeutouo</u>, Samuel Bowong. (2023) 
+						<i>Separation of Concerns in an Edge-Based Compartmental Modeling Framework</i>, 
+						<b>the 16th International Joint Conference on Biomedical Engineering Systems and Technologies</b> (Lisbonne, Portugal).  
+						<a class="no_bold" href="https://hal.science/hal-03953230" target="blank">hal-03953230</a> 
+						<a class="ref" href="https://hal.sorbonne-universite.fr/hal-03953230v1/document" target="blank"><i class="far fa-file-pdf"></i></a> 
+					</li>
+
+					<li>
+						<u>Jerry Lacmou Zeutouo</u>, Vianney Kengne Tchendji, Jean Frédéric Myoupo. (2022) 
+						<i>Coarse-Grained Multicomputer Parallel Algorithm Using the Four-Splitting Technique for the Minimum Cost Parenthesizing Problem</i>, 
+						<b>African Conference on Computer Science and Applied Mathematics</b> (Yaounde, Cameroon).  
+						<a class="no_bold" href="https://hal.science/hal-03712194" target="blank">hal-03712194</a> 
+						<a class="ref" href="https://hal.science/hal-03712194v1/document" target="blank"><i class="far fa-file-pdf"></i></a> 
+					</li>
+
+					<li>
+						<u>Jerry Lacmou Zeutouo</u>, Grace Colette Tessa Masse, Franklin Ingrid Kamga Youmbi. (2020) 
+						<i>A CGM-Based Parallel Algorithm Using the Four-Russians Speedup for the 1-D Sequence Alignment Problem</i>, 
+						<b>African Conference on Computer Science and Applied Mathematics</b> (Thiès, Senegal).  
+						<a class="no_bold" href="https://hal.science/hal-02925791" target="blank">hal-02925791</a> 
+						<a class="ref" href="https://hal.science/hal-02925791v1/document" target="blank"><i class="far fa-file-pdf"></i></a> 
+					</li>
+
+					<li>
+						<u>Jerry Lacmou Zeutouo</u>, Vianney Kengne Tchendji. (2018) 
+						<i>Speeding up CGM-Based Parallel Algorithm for Minimum Cost Parenthesizing Problem</i>, 
+						<b>The 2018 International Conference on Parallel and Distributed Processing Techniques and Applications</b> (Las Vegas, USA).  
+						<a class="no_bold" href="https://hal.science/hal-01900171" target="blank">hal-01900171</a> 
+						<a class="ref" href="https://hal.science/hal-01900171v1/document" target="blank"><i class="far fa-file-pdf"></i></a> 
+					</li>
+					
+				</ol>
+
+			</div>
+
+		</div>
+
+		<!-- -------------- Awards -------------- -->
+
+		<!-- <div class="row" id="awa" style="padding-top: 5em; margin-bottom: 2em;">
+
+			<div class="col-sm-9 offset-sm-3">
+
+				<h3> Fellowships and Awards </h3>
+				<p>
+					<ul>
+						<li>
+							2022 | <b>Research Fellowship</b> | Scuola Superiore Sant’Anna, Pisa <br>
+							<i style="font-size: .95em;">Value: EUR 25.300 (1 year).</i>
+						</li>
+						<li>
+							2021 | <b>CERF Medical Engineering Prize</b> | Cullen Eduction and Research Fund <br>
+							<i style="font-size: .95em;">Value: EUR 500.000. Co-Writer and Project Leader.</i>
+						</li>
+						<li>
+							2019 | <b>IEEE EMBS Prize Paper Award</b> | IEEE Engineering in Medicine & Biology Society (EMBS)<br>
+							<i style="font-size: .95em;">Value: USD 300. 3rd place with [J2] paper.</i>
+						</li>
+						<li>
+							2014 | <b>Research Fellowship</b> | Région Ile de France<br>
+							<i style="font-size: .95em;">Value: EUR 102.200 (3 years).</i>
+						</li>
+						<li>
+							2012 | <b>Research Fellowship</b> | Northwestern University<br>
+							<i style="font-size: .95em;">Value: USD 12.600 (6 months).</i>
+						</li>
+					</ul>
+				</p> 
+			</div>
+
+		
+		</div> -->
+
+		<!-- -------------- News -------------- -->
+
+		<div class="row" id="news" style="padding-top: 5em;">
+
+			<div class="col-sm-9 offset-sm-3">
+
+				<h3> News </h3>
+
+				<a class="twitter-timeline" data-tweet-limit="3" href="https://twitter.com/jerrylacmou?ref_src=twsrc%5Etfw">Tweets by jerrylacmou</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+			</div>
+		
+		</div>
+
+		<div class="col-sm-9 offset-sm-3" style="margin-top: 5em;">
+		<p style="font-size: 0.8em;"><a href="https://hits.sh/tommasoproietti-Parallel Computing.github.io/"><img alt="Hits" src="https://hits.sh/tommasoproietti-Parallel Computing.github.io.svg"/></a> For any information, do not hesitate to write to me. Last update: March 2023. </p>
+		</div>
+
+  </body>
+</html>
